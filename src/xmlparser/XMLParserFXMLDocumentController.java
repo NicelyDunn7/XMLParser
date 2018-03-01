@@ -64,7 +64,6 @@ public class XMLParserFXMLDocumentController implements Initializable {
             XMLTreeContainer.getChildren().remove(XMLTree);
             XMLTree = new TreeView<>(root);
             XMLTreeContainer.getChildren().add(XMLTree);
-            //expandTreeView(root);
         } else {
             System.out.println("XML Root is null.");
         }
