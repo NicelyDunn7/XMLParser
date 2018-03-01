@@ -9,11 +9,13 @@
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xmlparser.XMLParserFXMLDocumentController">
    <children>
       <Button fx:id="fileButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#fileButtonHandler" text="Choose File" />
-      <Label fx:id="fileNameLabel" layoutX="114.0" layoutY="14.0" prefHeight="27.0" prefWidth="471.0" />
+      <Label fx:id="fileNameLabel" layoutX="331.0" layoutY="14.0" prefHeight="27.0" prefWidth="254.0" />
       <VBox fx:id="XMLTreeContainer" layoutX="14.0" layoutY="47.0" prefHeight="338.0" prefWidth="572.0">
          <children>
             <TreeView fx:id="XMLTree" />
          </children>
       </VBox>
+      <Button fx:id="expandCellsButton" layoutX="112.0" layoutY="14.0" mnemonicParsing="false" onAction="#expandCellsHandler" text="Expand Cells" />
+      <Button fx:id="collapseCellsButton" layoutX="217.0" layoutY="14.0" mnemonicParsing="false" onAction="#collapseCellsHandler" text="Collapse Cells" />
    </children>
 </AnchorPane>
