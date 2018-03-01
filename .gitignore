@@ -1,3 +1,6 @@
+.DS_Store
+*example.xml
+
 # Compiled class file
 *.class
 
