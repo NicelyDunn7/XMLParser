@@ -72,31 +72,22 @@ public class XMLParserFXMLDocumentController implements Initializable {
     @FXML
     private void expandCellsHandler(ActionEvent event){
         if(XMLTree.getRoot() != null){
-            expandCells(XMLTree.getRoot());
+            cellExpandCollapse(XMLTree.getRoot(), true);
         }
     }
     
     @FXML
     private void collapseCellsHandler(ActionEvent event){
         if(XMLTree.getRoot() != null){
-            collapseCells(XMLTree.getRoot());
+            cellExpandCollapse(XMLTree.getRoot(), false);
         }
     }
     
-    private void expandCells(TreeItem<?> item){
+    private void cellExpandCollapse(TreeItem<?> item, boolean expand){
         if(item != null && !item.isLeaf()){
-            item.setExpanded(true);
+            item.setExpanded(expand);
             for(TreeItem<?> child:item.getChildren()){
-                expandCells(child);
-            }
-        }
-    }
-    
-    private void collapseCells(TreeItem<?> item){
-        if(item != null && !item.isLeaf()){
-            item.setExpanded(false);
-            for(TreeItem<?> child:item.getChildren()){
-                collapseCells(child);
+                cellExpandCollapse(child, expand);
             }
         }
     }
